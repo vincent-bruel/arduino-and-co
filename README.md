@@ -7,6 +7,8 @@
 	https://github.com/MajicDesigns/MD_MAX72XX
 	https://github.com/witnessmenow/arduino-youtube-api
 	https://github.com/bblanchon/ArduinoJson
+	https://github.com/rocketscream/Low-Power
+	https://github.com/adafruit/Adafruit_NeoPixel
 
 
 
