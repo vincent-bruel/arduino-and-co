@@ -47,7 +47,7 @@ NTPClient timeClient(ntpUDP);
 
 //================== Youtube API STUFF ============================
 // Objets permettant de récupérer les stats Youtube
-YoutubeApi api(API_KEY, client);
+YoutubeApi *api = NULL;
 
 unsigned long api_mtbs = 300000; //mean time between api requests
 unsigned long api_lasttime = 0L;   //last time api request has been done
@@ -94,14 +94,14 @@ void getYoutubeDataAndDisplay()
   }
   if (first || millis() - api_lasttime > api_mtbs)  {
     Serial.println("---------Get Stats---------");
-    statsOK = api.getChannelStatistics(CHANNEL_ID);
+    statsOK = api->getChannelStatistics(CHANNEL_ID);
     if (statsOK) {
       atLeastOneStat = true;
       if (first) {
-        isub = api.channelStats.subscriberCount;
-        iview = api.channelStats.viewCount;
-        icmt = api.channelStats.commentCount;
-        ivid = api.channelStats.videoCount;
+        isub = api->channelStats.subscriberCount;
+        iview = api->channelStats.viewCount;
+        icmt = api->channelStats.commentCount;
+        ivid = api->channelStats.videoCount;
       }
     } else {
       Serial.println("---------Get Stats FAILED ---------");
@@ -114,17 +114,17 @@ void getYoutubeDataAndDisplay()
   if (atLeastOneStat) {
     // Print current stats
     Serial.println("---------Stats---------");
-    displayYoutubeStat("Subs ", api.channelStats.subscriberCount);
-    displayYoutubeStat("Vues ", api.channelStats.viewCount);
-    displayYoutubeStat("Cmt ", api.channelStats.commentCount);
-    displayYoutubeStat("Vid ", api.channelStats.videoCount);
+    displayYoutubeStat("Subs ", api->channelStats.subscriberCount);
+    displayYoutubeStat("Vues ", api->channelStats.viewCount);
+    displayYoutubeStat("Cmt ", api->channelStats.commentCount);
+    displayYoutubeStat("Vid ", api->channelStats.videoCount);
       Serial.println("------------------------");
       // Print delta stats
       if (isub != 0) {
-        displayYoutubeStat("Subs +", api.channelStats.subscriberCount - isub);
-        displayYoutubeStat("Vues +", api.channelStats.viewCount - iview);
-        displayYoutubeStat("Cmt +", api.channelStats.commentCount - icmt);
-        displayYoutubeStat("Vid +", api.channelStats.videoCount - ivid);
+        displayYoutubeStat("Subs +", api->channelStats.subscriberCount - isub);
+        displayYoutubeStat("Vues +", api->channelStats.viewCount - iview);
+        displayYoutubeStat("Cmt +", api->channelStats.commentCount - icmt);
+        displayYoutubeStat("Vid +", api->channelStats.videoCount - ivid);
       }
   }
   api_lasttime = millis();
@@ -145,6 +145,11 @@ void readEEPROM() {
   offset += YT_API_SIZE;
   eeprom_read_string(offset, CHANNEL_ID, YT_CHANNEL_SIZE);
   offset += YT_CHANNEL_SIZE;
+  Serial.print("API_KEY=");
+  Serial.println(API_KEY);
+  Serial.print("CHANNEL_ID=");
+  Serial.println(CHANNEL_ID);
+  
   //eeprom_read_string(offset, API_KEY, OPENWEATHER_SIZE);
   //offset += OPENWEATHER_SIZE;
 }
@@ -215,11 +220,13 @@ void setup() {
   mx.control(MD_MAX72XX::INTENSITY, 1); 
 
   Serial.begin(115200);
-  delay(10);
+  delay(2000);
   
   EEPROM.begin(EEPROM_SIZE);
   readEEPROM();
-
+  
+  api = new YoutubeApi(API_KEY, client);
+  
   wifiConnexion();
 
 }
