@@ -5,12 +5,17 @@ to point at some locations into the photo.
 	Arduino standard SoftwareSerial
 	
 ## Hardware
-1. Arduino Leonardo: but you can take any Arduino that works with 5V (Nano, Mega, ...)
-2. 16 Red led
-3. 1 shift register 74HC795
-4. Some cable (length depending of your frame's width in centimeters)	
-5. A 5V power supply (500mA should be large enough)
+1. Arduino Leonardo or any Arduino that works with 5V (Nano, Mega, ...)
+2. 16 Red led (16 is a maximum)
+3. 16 resistor 220ohms 1/4W (16 is a maximum)
+4. 2 shift register 74HC795 (each drives 8 leds)
+5. Some cable (length depending of your frame's width in centimeters)	
+6. A 5V power supply (500mA should be large enough)
 
 ## Pinout mapping
 See file Design/LuminousFrameFritzing.jpg
+
+## What do you have to tune ?
+1. Place leds behind you photo (2cm behind to obtain a sweet spot of approx 1cm on the photo)
+2. Change names in the .ino according to the place names or buildings/things you have put a led behind.
 
