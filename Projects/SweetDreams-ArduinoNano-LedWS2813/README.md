@@ -8,8 +8,9 @@ https://github.com/rocketscream/Low-Power
 https://github.com/adafruit/Adafruit_NeoPixel
 
 ## PinMapping
+
 WS2813 or WS2812 | ARDUINO
------------------|---------
+---------------- | ---------
     DI           | D6
     V            | NANO 5V
     G            | NANO GND
