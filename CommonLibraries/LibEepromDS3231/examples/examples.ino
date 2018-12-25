@@ -37,7 +37,7 @@ void setup() {
 	Serial.print("d=");
 	Serial.println(data.jour);
 	Serial.print("h=");
-	Serial.println(data.hour);
+	Serial.println(data.heure);
 	Serial.print("m=");
 	Serial.println(data.minute);
 	Serial.print("temp=");
