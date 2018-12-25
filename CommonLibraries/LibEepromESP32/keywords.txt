@@ -1,0 +1,3 @@
+setupEEPROMESP32	KEYWORD2
+eeprom_read_string	KEYWORD2
+eeprom_write_string	KEYWORD2
