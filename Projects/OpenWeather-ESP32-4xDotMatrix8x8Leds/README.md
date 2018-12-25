@@ -1,5 +1,8 @@
 ## Subject: Get weather data and display it with 4x 8x8 dot matrix led with an ESP32
 	
+## Hardware
+See CommonHardware\ESP32-4xDotMatrix8x8Leds
+
 ## You will need Plugins to manage ESP32:
 	https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md => to program ESP32
 		In arduino IDE, display File->Preferences then fill the URL field with https://dl.espressif.com/dl/package_esp32_index.json then close this page

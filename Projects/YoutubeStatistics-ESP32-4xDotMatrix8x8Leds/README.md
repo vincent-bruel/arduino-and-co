@@ -1,5 +1,8 @@
 ## Subject: Get youtube data and display it with 4x 8x8 dot matrix led with an ESP32
 
+## Hardware
+See CommonHardware\ESP32-4xDotMatrix8x8Leds
+
 ## Inspired from:
 	https://github.com/amadej10/TrolaESP32
 	
