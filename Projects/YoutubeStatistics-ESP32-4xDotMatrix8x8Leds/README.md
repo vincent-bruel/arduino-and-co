@@ -30,3 +30,22 @@ GND     | GND
 GPIO12  | DIN
 GPIO15  | CS
 GPIO14  | CLK
+
+## What is the procedure to program the ESP32 and make it work ?
+1. Install Arduino IDE
+2. Install ESP32 Plugin for Arduino IDE
+3. Open CommonLibraries\LibEepromESP32\examples\ESP32-EEPROM-WRITE-WIFI-CONF ino file with Arduino IDE
+4. Upload this ino to your ESP32
+5. Sign in on https://openweathermap.org/api, get a free API key
+5. Open Serial console, 115200 bauds, CR+LF, then enter SSID, PASSWORD, SSID2 or empty, PASSWORD2 or empty, Youtube API KEY, Youtube Channel ID, OpenWeather API KEY or empty
+6. Upload CommonLibraries\LibEepromESP32\examples\ESP32-EEPROM-READ-WIFI-CONF to your ESP32
+7. Open Serial console, 115200 bauds, check that values you previously entered are OK (not truncated for example)
+	-> If truncated, raise the #define XXX_SIZE values in CommonLibraries\LibEepromESP32 and restart this procedure at level 3. 
+8. Upload  Projects\YoutubeStatistics-ESP32-4xDotMatrix8x8Leds ino file to your ESP32
+9. Enjoy
+
+## Troubleshooting WIFI
+If no wifi can be reached you will see a message "Wifi NOK"
+Further attempts to make another connexion will be tried as the loop goes on.
+If WIFI is OK then NOK (power outage) then OK, the connexion will also be re-established in a few seconds (NOT TESTED)
+Recheck you API keys SSID and PASSWORD like indicated in stage 6.

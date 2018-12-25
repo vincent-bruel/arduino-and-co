@@ -34,7 +34,7 @@ GPIO14  | CLK
 3. Open CommonLibraries\LibEepromESP32\examples\ESP32-EEPROM-WRITE-WIFI-CONF ino file with Arduino IDE
 4. Upload this ino to your ESP32
 5. Sign in on https://openweathermap.org/api, get a free API key
-5. Open Serial console, 115200 bauds, CR+LF, then enter SSID, PASSWORD, SSID2 or empty, PASSWORD2 or empty, empty, empty, OpenWeather API KEY
+5. Open Serial console, 115200 bauds, CR+LF, then enter SSID, PASSWORD, SSID2 or empty, PASSWORD2 or empty, Youtube API KEY or empty, Youtube Channel ID or empty, OpenWeather API KEY
 6. Upload CommonLibraries\LibEepromESP32\examples\ESP32-EEPROM-READ-WIFI-CONF to your ESP32
 7. Open Serial console, 115200 bauds, check that values you previously entered are OK (not truncated for example)
 	-> If truncated, raise the #define XXX_SIZE values in CommonLibraries\LibEepromESP32 and restart this procedure at level 3. 
