@@ -1,7 +1,7 @@
 ## Subject: Backlight a photo :camera: (inside a wood or aluminium frame :framed_picture:), and place behind some leds and a lcd 16x2 chars
 to point at some locations into the photo.
 			
-## Mandatory Libraries, to install BEFORE programming the sketch to the ESP32:
+## Mandatory Libraries, to install BEFORE programming the sketch to the Arduino:
 	Arduino standard SoftwareSerial
 	
 ## Hardware
