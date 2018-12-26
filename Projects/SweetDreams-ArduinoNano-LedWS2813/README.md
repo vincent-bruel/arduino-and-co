@@ -14,3 +14,12 @@ WS2813 or WS2812 | ARDUINO
     DI           | D6
     V            | NANO 5V
     G            | NANO GND
+	
+## Procedure to follow
+1. Hold your tongue against your palate during the whole exercise
+2. Exhale through the mouth all the air of your lungs.
+3. Now repeat the 4s-7s-8s following procedure:
+	a. RED COLOR: Close your mouth and inhale quietly through the nose counting (in your head) up to 4.
+	b. ORANGE COLOR: Hold your breath counting to 7
+	c. GREEN COLOR: Exhale loudly through the mouth counting up to 8.
+	d. Loop to a.
