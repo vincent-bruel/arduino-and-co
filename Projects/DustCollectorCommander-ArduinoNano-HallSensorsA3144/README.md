@@ -44,6 +44,14 @@ V-        | GND Arduino
 1. Connecting high voltage side
 When looking at the relay, with the 3 pins of the high voltage side in front of you, the 2 pins to connect are
 the 2 left pins.
+
+
+RELAI     | Other device
+----------| ----------------------
+LEFT      | Output 230V phase
+MIDDLE    | Input 230V phase
+RIGHT     | Unused
+
 2. Connecting low voltage side
 
 RELAI     | Other device
