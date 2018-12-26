@@ -27,3 +27,9 @@ GPIO14  | CLK
 Two choices:
 1-Plug micro usb cable in the ESP32
 2-If you solder the optional female jack barrel, plug regulated 5V-1A male jack in it.
+
+## Troubleshooting
+If Arduino IDE cannot see your ESP32 after installing the plugin, look at the chipset which is near
+the ESP32 micro usb port:
+1. It is square: chances are that it has a CP2102 chipset => install the driver for CP2102
+2. It is rectangle: chances are that it has a CH340G or CH341 chipset => install the driver for CH340G or CH341
