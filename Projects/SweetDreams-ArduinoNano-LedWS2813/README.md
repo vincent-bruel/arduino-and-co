@@ -5,7 +5,7 @@
   
 
 ## Schema
-![Schema](https://github.com/vincent-bruel/arduino-and-co/tree/master/Projects/SweetDreams-ArduinoNano-LedWS2813/Sweet Dreams_bb.jpg)
+![Schema](https://github.com/vincent-bruel/arduino-and-co/tree/master/Projects/SweetDreams-ArduinoNano-LedWS2813/Sweet%20Dreams_bb.jpg)
   
 ## Libraries needed:
 https://github.com/rocketscream/Low-Power
