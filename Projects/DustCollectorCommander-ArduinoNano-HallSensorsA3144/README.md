@@ -45,6 +45,7 @@ V-        | GND Arduino
 When looking at the relay, with the 3 pins of the high voltage side in front of you, the 2 pins to connect are
 the 2 left pins.
 2. Connecting low voltage side
+
 RELAI     | Other device
 ----------| ----------------------
 5V in     | VCC power line 5V
