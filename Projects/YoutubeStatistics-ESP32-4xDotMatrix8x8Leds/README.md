@@ -1,5 +1,8 @@
 ## Subject: Get youtube data and display it with 4x 8x8 dot matrix led with an ESP32
 
+## Schema
+![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/CommonHardware/ESP32-4xDotMatrix8x8Leds/ESP32-4x8x8%20dot%20matrix%20led%20max7219_bb.jpg)
+
 ## Hardware
 See CommonHardware\ESP32-4xDotMatrix8x8Leds
 
