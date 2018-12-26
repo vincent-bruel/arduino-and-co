@@ -3,6 +3,10 @@
   http://www.telegraph.co.uk/health-fitness/mind/get-sleep-tricks-tips/
   https://www.20minutes.fr/sante/1602659-20150506-technique-4-7-8-remede-miracle-endormir-moins-minute
   
+
+## Schema
+![Schema](https://github.com/vincent-bruel/arduino-and-co/tree/master/Projects/SweetDreams-ArduinoNano-LedWS2813/Sweet Dreams_bb.jpg)
+  
 ## Libraries needed:
 https://github.com/rocketscream/Low-Power
 https://github.com/adafruit/Adafruit_NeoPixel
