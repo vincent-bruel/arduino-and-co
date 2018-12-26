@@ -1,5 +1,5 @@
 ## Subject: Control a dust collector (Jet DC110A-M 230V 1.5HP) via sensors on blast gates and/or with manual switches
-Note that the relai controled by the Arduino Nano does not control directly the dust collector: it controls a power Contacter that controls the dust collector power.
+Note that the relay controled by the Arduino Nano does not control directly the dust collector: it controls a power Contacter that controls the dust collector power.
 You can use regular ethernet cables (with or without rj45 connectors) to plug sensors and switches to the PCB hosting the Arduino and the relay.
 
 ## Schema

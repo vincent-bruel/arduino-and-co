@@ -1,6 +1,12 @@
-## Subject: Backlight a photo :camera: (inside a wood or aluminium frame :framed_picture:), and place behind some leds and a lcd 16x2 chars
-to point at some locations into the photo.
-			
+## Subject: Backlight a photo :camera: (inside a wood or aluminium frame :framed_picture:), 
+and place behind some leds and a lcd 16x2 chars
+to point/highlight some locations into the photo.
+		
+
+## Schema
+![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/LuminousPhotoFrame-Leonardo-74HC795-2x16LCDSerial/LuminousFrameFritzing_bb.jpg)
+  
+  
 ## Mandatory Libraries, to install BEFORE programming the sketch to the Arduino:
 	Arduino standard SoftwareSerial
 	
@@ -13,7 +19,7 @@ to point at some locations into the photo.
 6. A 5V power supply (500mA should be large enough)
 
 ## Pinout mapping
-See file Design/LuminousFrameFritzing.jpg
+See file LuminousFrameFritzing.jpg
 
 ## What do you have to tune ?
 1. Place leds behind you photo (2cm behind to obtain a sweet spot of approx 1cm on the photo)
