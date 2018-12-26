@@ -5,6 +5,8 @@ So the pins are ordered as they are in my build, but does not correspond to the 
 the fritzing schema.
 ![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/CommonHardware/ESP32-4xDotMatrix8x8Leds/ESP32-4x8x8%20dot%20matrix%20led%20max7219_bb.jpg)
 
+![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/CommonHardware/ESP32-4xDotMatrix8x8Leds/20181225_112027.jpg)
+
 ## Hardware list
 1x PCB prototype board, space 2.54mm between holes
 1x ESP32, for example DOIT ESP32
