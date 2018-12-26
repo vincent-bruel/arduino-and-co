@@ -27,6 +27,7 @@ PIN2    | Arduino D6 pin
 ## Pinout mapping for Arduino
 ARDUINO  | Other device
 -------- | ----------------------
+D2       | to RELAY DIN (command)
 D3,D4,D5 | to A3144 hall effect SIGNAL pin
 D6, ...  | to manual switch PIN2
 VIN      | to HILINK (220V-5V converter) V+ pin
