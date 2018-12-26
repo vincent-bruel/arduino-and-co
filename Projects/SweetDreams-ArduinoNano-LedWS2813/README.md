@@ -22,4 +22,4 @@ WS2813 or WS2812 | ARDUINO
 	1. RED COLOR: Close your mouth and inhale quietly through the nose counting (in your head) up to 4.
 	2. ORANGE COLOR: Hold your breath counting to 7
 	3. GREEN COLOR: Exhale loudly through the mouth counting up to 8.
-	4. Loop to 1.
+	4. Loop to i.
