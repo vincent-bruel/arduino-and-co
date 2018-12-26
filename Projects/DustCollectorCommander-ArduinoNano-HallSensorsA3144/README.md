@@ -2,6 +2,9 @@
 Note that the relai controled by the Arduino Nano does not control directly the dust collector: it controls a power Contacter that controls the dust collector power.
 You can use regular ethernet cables (with or without rj45 connectors) to plug sensors and switches to the PCB hosting the Arduino and the relay.
 
+## Schema
+![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander_bb.jpg)
+  
 ## You will need Arduino IDE to program arduino nano via USB.
 
 ## Pinout mapping for hall effect sensor A3144
@@ -38,8 +41,15 @@ V+        | VIN Arduino
 V-        | GND Arduino
 
 ## Pinout mapping for the 230V relay 10A
-When looking at the relay, with the 3 pins in front of you, the 2 pins to connect are
+1. Connecting high voltage side
+When looking at the relay, with the 3 pins of the high voltage side in front of you, the 2 pins to connect are
 the 2 left pins.
+2. Connecting low voltage side
+RELAI     | Other device
+----------| ----------------------
+5V in     | VCC power line 5V
+GND       | GND power line
+DIN       | Arduino D2
 
 ## Pinout mapping for the 230V box controlling the dust collector
 See photo and plans.
