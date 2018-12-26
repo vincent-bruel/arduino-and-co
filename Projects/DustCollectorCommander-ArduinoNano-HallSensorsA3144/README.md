@@ -3,6 +3,8 @@ Note that the relai controled by the Arduino Nano does not control directly the 
 You can use regular ethernet cables (with or without rj45 connectors) to plug sensors and switches to the PCB hosting the Arduino and the relay.
 
 ## Schema
+In this schema, only one Hall Sensor and only one manual switch are drawn to stay clear.
+But you can add as many as there are Numerical/Analogical PIN on the Arduino you choose.
 ![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander_bb.jpg)
   
 ## You will need Arduino IDE to program arduino nano via USB.
