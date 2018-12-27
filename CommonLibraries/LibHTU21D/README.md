@@ -1,8 +1,8 @@
 ## Subject: Manages HTU21D temperature and himidity sensor.
+This library is just an encapsulation of Sparkfun's HTU21D library
 
 ![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/CommonLibraries/LibHTU21D/htu21d-breakout.jpg)
 
-This library is just an encapsulation of Sparkfun's HTU21D library
 
 ## HTU21D Specifications
 Accuracy: 0.1V
