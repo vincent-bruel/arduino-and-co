@@ -5,9 +5,13 @@ This library is just an encapsulation of Sparkfun's HTU21D library
 
 
 ## HTU21D Specifications
+
 Accuracy: 0.1V
+
 Voltage 3.3V
+
 Communication: I2C protocol, two wire
+
 
 ## Pinout mapping
 HTU21D breakout | Other device
