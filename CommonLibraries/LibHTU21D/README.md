@@ -14,5 +14,5 @@ HTU21D breakout | Other device
 ----------------|-------------
 SDA             | SDA
 SCL             | SCL
--               | GND
-+               | VCC 3.3V
+"-"             | GND
+"+"             | VCC 3.3V
