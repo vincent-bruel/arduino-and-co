@@ -2,9 +2,7 @@
 
 ## Projects involving Arduino, ESP8266, ESP32:
 	1. Control a dust collector with magnetic sensors on blast gates
-	```
-![Dust Collector Commander](https://github.com/vincent-bruel/arduino-and-co/tree/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144)
-```
+![         =>Dust Collector Commander](https://github.com/vincent-bruel/arduino-and-co/tree/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144)
 
 	2. Highlight a photo frame with backlight, led pointing at locations and LCD screen displaying location names
 ![Luminous photo frame](https://github.com/vincent-bruel/arduino-and-co/tree/master/Projects/LuminousPhotoFrame-Leonardo-74HC795-2x16LCDSerial)
