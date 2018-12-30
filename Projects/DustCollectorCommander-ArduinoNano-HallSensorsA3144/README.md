@@ -16,6 +16,9 @@ The dust collector has two crosses on it since only the blower part is used: the
 ## Electrical diagram for the Arduino Dust controler
 In this diagram, only one Hall Sensor and only one manual switch are drawn to stay clear.
 But you can add as many as there are Numerical/Analogical PIN on the Arduino you choose.
+All black wires are connected together (and here to the Arduino GND pin) in this type of protoboard.
+All red wires are connected together (and here to the Arduino 5V pin) in this type of protoboard.
+
 ![Diagram](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander_bb.jpg)
   
 ## Electrical diagram for the board switch
