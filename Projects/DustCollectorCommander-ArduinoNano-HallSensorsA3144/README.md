@@ -11,7 +11,7 @@ requires 230V wiring, that can be dangerous and cause serious injury/death/...
 This schema shows the logical architecture.
 The dust collector has two crosses on it since only the blower part is used: the vortex, the bags, and the mobile cart on wheels are not used.
 In the future, the "Mobile hole board" movement will be motorized:
-1. "Mobile hole board" movement will be bound to the blast gate detector to select the main dust collection line when activated
+1. "Mobile hole board" movement will be bound to the blast gate detector to select the main dust collection line when activated: currently I have to manually move the "mobile hole board" in front of the main line hole.
 2. The manual switch, which is now used to turn the dust collector on manually for the non-main-line dust producers
 will be replaced by an analog potentiometer (or a rotary encoder) to select which line to align with the "mobile hole board".
 
