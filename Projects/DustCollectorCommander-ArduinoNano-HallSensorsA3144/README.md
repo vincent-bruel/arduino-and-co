@@ -1,7 +1,11 @@
 ## Subject: Control a dust collector (Jet DC110A-M 230V 1.5HP) via magnetic sensors on blast gates and/or with manual switches
 Note that the relay controled by the Arduino Nano does not control directly the dust collector: it controls a power Contacter that controls the dust collector power.
 You can use regular ethernet cables (with or without rj45 connectors) to plug sensors and switches to the PCB hosting the Arduino and the relay.
-The magnetic detection is made with hall sensors (cheap A3144)
+
+The magnetic detection is made with hall sensors (cheap A3144).
+
+WARNING: do not attempt to wire/solder anything unless you have the required skills to do it: this project
+requires 230V wiring, that can be dangerous and cause serious injury/death/...
 
 ## Logical Architecture
 This schema shows the logical architecture.
@@ -56,7 +60,7 @@ V-        | GND Arduino
 ## Pinout mapping for the 230V relay 10A
 1. Connecting high voltage side
 When looking at the relay, with the 3 pins of the high voltage side in front of you, the 2 pins to connect are
-the 2 left pins.
+the 2 left pins (for a Songle classical blue relay).
 
 
 RELAI     | Other device
