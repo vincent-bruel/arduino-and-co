@@ -1,11 +1,11 @@
 ## Subject: Control a dust collector (Jet DC110A-M 230V 1.5HP) via magnetic sensors on blast gates and/or with manual switches
 Note that the relay controled by the Arduino Nano does not control directly the dust collector: it controls a power Contacter that controls the dust collector power.
 You can use regular ethernet cables (with or without rj45 connectors) to plug sensors and switches to the PCB hosting the Arduino and the relay.
-The magnetic detection is made with hall sensors (cheap A3144, less than 1$)
+The magnetic detection is made with hall sensors (cheap A3144)
 
 ## Logical Architecture
 This schema shows the logical architecture.
-The dust collector has to crosses since only the blower part is used.
+The dust collector has two crosses on it since only the blower part is used: the vortex, the bags, and the mobile cart on wheels are not used.
 
 ![Logical Architecture](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander-architecture.jpg)
 
