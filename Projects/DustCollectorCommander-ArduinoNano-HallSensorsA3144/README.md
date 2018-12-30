@@ -1,12 +1,22 @@
-## Subject: Control a dust collector (Jet DC110A-M 230V 1.5HP) via sensors on blast gates and/or with manual switches
+## Subject: Control a dust collector (Jet DC110A-M 230V 1.5HP) via magnetic sensors on blast gates and/or with manual switches
 Note that the relay controled by the Arduino Nano does not control directly the dust collector: it controls a power Contacter that controls the dust collector power.
 You can use regular ethernet cables (with or without rj45 connectors) to plug sensors and switches to the PCB hosting the Arduino and the relay.
+The magnetic detection is made with hall sensors (cheap A3144, less than 1$)
 
-## Schema
-In this schema, only one Hall Sensor and only one manual switch are drawn to stay clear.
+## Logical Architecture
+This schema shows the logical architecture.
+The dust collector has to crosses since only the blower part is used.
+
+![Logical Architecture](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander-architecture.jpg)
+
+## Electrical diagram for the Arduino Dust controler
+In this diagram, only one Hall Sensor and only one manual switch are drawn to stay clear.
 But you can add as many as there are Numerical/Analogical PIN on the Arduino you choose.
-![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander_bb.jpg)
+![Diagram](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander_bb.jpg)
   
+## Electrical diagram for the board switch
+<This diagram will be drawn very soon>
+
 ## You will need Arduino IDE to program arduino nano via USB.
 
 ## Pinout mapping for hall effect sensor A3144
