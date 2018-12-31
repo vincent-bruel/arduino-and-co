@@ -8,7 +8,11 @@ WARNING: do not attempt to wire/solder anything unless you have the required ski
 requires 230V wiring, that can be dangerous and cause serious injury/death/...
 
 ## Logical Architecture
-This schema shows the logical architecture.
+
+
+![Logical Architecture](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander-architecture.jpg)
+
+The above schema shows the logical architecture.
 It shows:
 1. The Mobile-Hole-Linear-Plate : a simple wood board with four 125mm hole in it. One of this 4 holes is aligned (nowadays: manually) via a DC motor with rack and pinion.
 2. The Motor-Board: Arduino Nano and DC motor driver
@@ -29,8 +33,6 @@ The motor board for the "Mobile hole board" movement is not yet developped, but 
 2. Nowadays a simple switch is used to turn the dust collector after manually having moved the "mobile hole board" for the non-main-line dust producers
 3. This simple switch will be replaced by an analog potentiometer (or a rotary encoder) to select which line to align with the "mobile hole board".
 
-![Logical Architecture](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander-architecture.jpg)
-
 ## Some use cases
 1. Use the Bandsaw: 
 	1. Operator will turn the 4 way selector to the Bandsaw position
@@ -50,7 +52,7 @@ The motor board for the "Mobile hole board" movement is not yet developped, but 
 	5. Operator will push the blast gate of the Miter saw (closed position)
 	6. Controler-Board will Turn the dust collector OFF.
 
-3. Typical woodworking use case
+3. Typical woodworking meta use case (use case using the two previous uses cases)
 	1. Use Bandsaw multiple times (Operator manipulates the 4-way-selector)
 	2. Use the Jointer multiple times  (Operator manipulates the 4-way-selector)
 	3. Use the Table saw or Miter saw multiple times  (Operator manipulates the Miter saw blast gate)
