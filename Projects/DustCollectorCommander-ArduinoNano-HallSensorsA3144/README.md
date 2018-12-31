@@ -19,22 +19,22 @@ The motor board for the "Mobile hole board" movement is not yet developped, but 
 
 ## Some use cases
 1. Use the Bandsaw: 
-A. Operator will turn the 4 way selector to the Bandsaw position
-B. The Arduino motor controler (AMC-board) will Turn the dust collector off (if it was on), 
-B. AMC-board will Send, via Serial Comm, an order to the Motor Board to move the "mobile hole board" in the Bandsaw line position
-C. AMC-board will Wait a few seconds for the Motor board to acomplish its task
-D. AMC-board will Turn the dust collector ON.
-E. Operator will use the Bandsaw
-F. Operator will turn the 4 way selector to the OFF position
-G. AMC-board will Turn the dust collector OFF.
+	A. Operator will turn the 4 way selector to the Bandsaw position
+	B. The Arduino motor controler (AMC-board) will Turn the dust collector off (if it was on), 
+	B. AMC-board will Send, via Serial Comm, an order to the Motor Board to move the "mobile hole board" in the Bandsaw line position
+	C. AMC-board will Wait a few seconds for the Motor board to acomplish its task
+	D. AMC-board will Turn the dust collector ON.
+	E. Operator will use the Bandsaw
+	F. Operator will turn the 4 way selector to the OFF position
+	G. AMC-board will Turn the dust collector OFF.
 
 2. Use the Miter saw
-A. Whe assume that the 4 way selector is in the OFF position
-B. Operator will push the blast gate of the Miter saw (open position)
-C. AMC-board will Turn the dust collector ON
-D. Operator will use the miter saw
-E. Operator will push the blast gate of the Miter saw (closed position)
-F. AMC-board will Turn the dust collector OFF.
+	A. Whe assume that the 4 way selector is in the OFF position
+	B. Operator will push the blast gate of the Miter saw (open position)
+	C. AMC-board will Turn the dust collector ON
+	D. Operator will use the miter saw
+	E. Operator will push the blast gate of the Miter saw (closed position)
+	F. AMC-board will Turn the dust collector OFF.
 
 ## Electrical diagram for the Arduino Dust controler
 In this diagram, only one Hall Sensor and only one manual switch are drawn to stay clear.
