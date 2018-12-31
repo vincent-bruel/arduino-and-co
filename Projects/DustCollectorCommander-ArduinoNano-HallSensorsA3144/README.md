@@ -9,6 +9,20 @@ requires 230V wiring, that can be dangerous and cause serious injury/death/...
 
 ## Logical Architecture
 This schema shows the logical architecture.
+It shows:
+1. The Mobile-Hole-Linear-Plate : a simple wood board with four 125mm hole in it. One of this 4 holes is aligned (nowadays: manually) via a DC motor with rack and pinion.
+2. The Motor-Board: Arduino Nano and DC motor driver
+3. The Controler-Board: Arduino Nano and relay. Input: magnetic sensors on each blast gate. Output: live to the Switch-Board.
+4. The Switch-Board: 230V box with a 20A contactor triggered by the relay which is inside the Controler-Board.
+5. The 4 way selector: a simple potentiometer (or multi switch), with 4 positions to make the Controler-Board ask to the Motor-Board to select the desired Hole line.
+6. The Blast gates with magnetic sensor: DIY wood blast gate, with a A3144 sensor, a 10Kohm resistor and a magnet
+7. The flexible pipes: thin metallic flexible pipes 125mm diameter
+8. The non flexible pipes: standard 100mm PVC pipes (grey ones).
+9. The DC 12V motor: a car wiper motor
+10. The green lines: they are made of RJ45 cables with three cables used for 5V, GND, and return SIGNAL.
+11. The red lines: they are made of 3x1.5mm flexible cable for 230V, with only 2 cables used on the Controler-Board to Switch-board path.
+12. The violet lines: they are made of RJ45 cables with three cables used for: RX, TX, GND.
+
 The dust collector has two crosses on it since only the blower part is used: the vortex, the bags, and the mobile cart on wheels are not used.
 The motor board for the "Mobile hole board" movement is not yet developped, but it will be based on a Arduino Nano also and a powerfull DC motor driver (Wiper motor certainly):
 1. "Mobile hole board" movement will be bound to the blast gate detector (via Serial Comm) to select the main dust collection line when activated: currently I have to manually move the "mobile hole board" in front of the main line hole.
@@ -36,72 +50,13 @@ The motor board for the "Mobile hole board" movement is not yet developped, but 
 	5. Operator will push the blast gate of the Miter saw (closed position)
 	6. AMC-board will Turn the dust collector OFF.
 
-## Electrical diagram for the Arduino Dust controler
-In this diagram, only one Hall Sensor and only one manual switch are drawn to stay clear.
-But you can add as many as there are Numerical/Analogical PIN on the Arduino you choose.
-All black wires are connected together (and here to the Arduino GND pin) in this type of protoboard.
-All red wires are connected together (and here to the Arduino 5V pin) in this type of protoboard.
-
-![Diagram](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander_bb.jpg)
-  
-## Electrical diagram for the board switch
-<This diagram will be drawn very soon>
-
-## You will need Arduino IDE to program arduino nano via USB.
-
-## Pinout mapping for hall effect sensor A3144
-A3144   | Other device
-------- | ----------------------
-VCC     | VCC power line 5V
-GND     | GND power line
-SIGNAL  | Arduino D3, or D4, or D5, or whatever pin you choose
-VCC     | 10kohms resistor R1
-SIGNAL  | 10kohms resistor R1
-
-## Pinout mapping for switch button (configured as INPUT_PULLUP in arduino sketch, so with 20k resistor hidden)
-BUTTON  | Other device
-------- | ----------------------
-PIN1    | 10nF C1 ceramik (103J)
-PIN2    | 10nF C1 ceramik (103J)
-PIN1    | VCC power line 5V
-PIN2    | Arduino D6 pin 
-
-## Pinout mapping for Arduino
-ARDUINO  | Other device
--------- | ----------------------
-D2       | to RELAY DIN (command)
-D3,D4,D5 | to A3144 hall effect SIGNAL pin
-D6, ...  | to manual switch PIN2
-VIN      | to HILINK (220V-5V converter) V+ pin
-GND      | to HILINK (220V-5V converter) V- pin
-
-## Pinout mapping for the HILINK (220V-5V converter)
-HILINK    | Other device
-----------| ----------------------
-230V pin1 | to 230V plug PHASE
-230V pin2 | to 230V plug NEUTRAL
-V+        | VIN Arduino
-V-        | GND Arduino
-
-## Pinout mapping for the 230V relay 10A
-1. Connecting high voltage side
-When looking at the relay, with the 3 pins of the high voltage side in front of you, the 2 pins to connect are
-the 2 left pins (for a Songle classical blue relay).
-
-
-RELAI     | Other device
-----------| ----------------------
-LEFT      | Output 230V phase
-MIDDLE    | Input 230V phase
-RIGHT     | Unused
-
-2. Connecting low voltage side
-
-RELAI     | Other device
-----------| ----------------------
-5V in     | VCC power line 5V
-GND       | GND power line
-DIN       | Arduino D2
-
-## Pinout mapping for the 230V box controlling the dust collector
-See photo and plans.
+3. Typical woodworking use case
+	1. Use Bandsaw multiple times (Operator manipulates the 4-way-selector)
+	2. Use the Jointer multiple times  (Operator manipulates the 4-way-selector)
+	3. Use the Table saw or Miter saw multiple times  (Operator manipulates the Miter saw blast gate)
+	4. Use the workbench blast gate to connect and use the orbital sander  (Operator manipulates the Workbench blast gate)
+	5. Use the workbench blast gate to connect and use the flexible pipe to clean the workbench (Operator manipulates the Workbench blast gate)
+	
+Note that we do not move the Mobile-hole-board to the Main line position when 4 way selector is in OFF position.
+This allow us to use for example the bandsaw multiple times (switching 4 way selector from BandSaw to OFF to Bandsaw to OFF...) without
+moving the Mobile-hole-board
