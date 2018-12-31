@@ -1,5 +1,5 @@
-## Subject: Control a dust collector (Jet DC110A-M 230V 1.5HP) via magnetic sensors on blast gates and/or with manual switches
-Note that the relay controled by the Arduino Nano does not control directly the dust collector: it controls a power Contacter that controls the dust collector power.
+## Subject: Control a dust collector (Jet DC110A-M 230V 1.5HP) via magnetic sensors on blast gates and/or with 4 way line selector
+Note that the relay controled by the Arduino Nano does not control directly the dust collector: it controls a power Contactor that controls the dust collector power.
 You can use regular ethernet cables (with or without rj45 connectors) to plug sensors and switches to the PCB hosting the Arduino and the relay.
 
 The magnetic detection is made with hall sensors (cheap A3144).
@@ -10,12 +10,31 @@ requires 230V wiring, that can be dangerous and cause serious injury/death/...
 ## Logical Architecture
 This schema shows the logical architecture.
 The dust collector has two crosses on it since only the blower part is used: the vortex, the bags, and the mobile cart on wheels are not used.
-In the future, the "Mobile hole board" movement will be motorized:
-1. "Mobile hole board" movement will be bound to the blast gate detector to select the main dust collection line when activated: currently I have to manually move the "mobile hole board" in front of the main line hole.
-2. The manual switch, which is now used to turn the dust collector on manually for the non-main-line dust producers
-will be replaced by an analog potentiometer (or a rotary encoder) to select which line to align with the "mobile hole board".
+The motor board for the "Mobile hole board" movement is not yet developped, but it will be based on a Arduino Nano also and a powerfull DC motor driver (Wiper motor certainly):
+1. "Mobile hole board" movement will be bound to the blast gate detector (via Serial Comm) to select the main dust collection line when activated: currently I have to manually move the "mobile hole board" in front of the main line hole.
+2. Nowadays a simple switch is used to turn the dust collector after manually having moved the "mobile hole board" for the non-main-line dust producers
+3. This simple switch will be replaced by an analog potentiometer (or a rotary encoder) to select which line to align with the "mobile hole board".
 
 ![Logical Architecture](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander-architecture.jpg)
+
+## Some use cases
+1. Use the Bandsaw: 
+A. Operator will turn the 4 way selector to the Bandsaw position
+B. The Arduino motor controler (AMC-board) will Turn the dust collector off (if it was on), 
+B. AMC-board will Send, via Serial Comm, an order to the Motor Board to move the "mobile hole board" in the Bandsaw line position
+C. AMC-board will Wait a few seconds for the Motor board to acomplish its task
+D. AMC-board will Turn the dust collector ON.
+E. Operator will use the Bandsaw
+F. Operator will turn the 4 way selector to the OFF position
+G. AMC-board will Turn the dust collector OFF.
+
+2. Use the Miter saw
+A. Whe assume that the 4 way selector is in the OFF position
+B. Operator will push the blast gate of the Miter saw (open position)
+C. AMC-board will Turn the dust collector ON
+D. Operator will use the miter saw
+E. Operator will push the blast gate of the Miter saw (closed position)
+F. AMC-board will Turn the dust collector OFF.
 
 ## Electrical diagram for the Arduino Dust controler
 In this diagram, only one Hall Sensor and only one manual switch are drawn to stay clear.
