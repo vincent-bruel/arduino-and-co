@@ -34,21 +34,21 @@ The motor board for the "Mobile hole board" movement is not yet developped, but 
 ## Some use cases
 1. Use the Bandsaw: 
 	1. Operator will turn the 4 way selector to the Bandsaw position
-	2. The Arduino motor controler (AMC-board) will Turn the dust collector off (if it was on), 
-	3. AMC-board will Send, via Serial Comm, an order to the Motor Board to move the "mobile hole board" in the Bandsaw line position
-	4. AMC-board will Wait a few seconds for the Motor board to acomplish its task
-	5. AMC-board will Turn the dust collector ON.
+	2. The Controler-Board will Turn the dust collector off (if it was on), 
+	3. Controler-Board will Send, via Serial Comm, an order to the Motor-Board to move the "mobile hole board" in the Bandsaw line position
+	4. Controler-Board will Wait a few seconds for the Motor-board to accomplish its task
+	5. Controler-Board will Turn the dust collector ON.
 	6. Operator will use the Bandsaw
 	7. Operator will turn the 4 way selector to the OFF position
-	8. AMC-board will Turn the dust collector OFF.
+	8. Controler-Board will Turn the dust collector OFF.
 
 2. Use the Miter saw
 	1. Whe assume that the 4 way selector is in the OFF position
 	2. Operator will push the blast gate of the Miter saw (open position)
-	3. AMC-board will Turn the dust collector ON
+	3. Controler-Board will Turn the dust collector ON
 	4. Operator will use the miter saw
 	5. Operator will push the blast gate of the Miter saw (closed position)
-	6. AMC-board will Turn the dust collector OFF.
+	6. Controler-Board will Turn the dust collector OFF.
 
 3. Typical woodworking use case
 	1. Use Bandsaw multiple times (Operator manipulates the 4-way-selector)
@@ -59,4 +59,4 @@ The motor board for the "Mobile hole board" movement is not yet developped, but 
 	
 Note that we do not move the Mobile-hole-board to the Main line position when 4 way selector is in OFF position.
 This allow us to use for example the bandsaw multiple times (switching 4 way selector from BandSaw to OFF to Bandsaw to OFF...) without
-moving the Mobile-hole-board
+moving the Mobile-hole-board many times, saving time and saving the motor parts.
