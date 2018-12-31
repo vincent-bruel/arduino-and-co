@@ -10,7 +10,7 @@ I just motorized it with a Motor-Board (see the dedicated directory) to control 
 How do the Motor-Board know in which position the wood plate is ?
 This is done with 4 hall sensor (the same type as the one I used on blast gates) and 1 magnet.
 
-## Pseudo Algorithm
+## Pseudo Algorithm for moving the mobile hole linear
 
 1. If motor is not moving and no hall sensor is activated => ERROR
 Because we always stop the motor in front of a hole position, so the magnet is always in front of a hall sensor.
