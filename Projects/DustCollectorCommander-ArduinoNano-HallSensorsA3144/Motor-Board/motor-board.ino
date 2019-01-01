@@ -119,18 +119,16 @@ void loop() {
 
 
 void motorGo(uint8_t direct, uint8_t pwm) {
-  if (direct == CW)
-  {
+  if (direct == CW) {
     digitalWrite(MOTOR_A1_PIN, LOW);
     digitalWrite(MOTOR_B1_PIN, HIGH);
   }
-  else if (direct == CCW)
-  {
+  else if (direct == CCW) {
     digitalWrite(MOTOR_A1_PIN, HIGH);
     digitalWrite(MOTOR_B1_PIN, LOW);
   }
-  else
-  {
+  else {
+    // STOP
     digitalWrite(MOTOR_A1_PIN, LOW);
     digitalWrite(MOTOR_B1_PIN, LOW);
   }
