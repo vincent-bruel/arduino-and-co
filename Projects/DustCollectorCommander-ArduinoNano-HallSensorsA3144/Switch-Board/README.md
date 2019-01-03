@@ -5,7 +5,7 @@ requires 230V wiring, that can be dangerous and cause serious injury/death/...
 
 ## Electrical diagram for the 230V switch board
 
-![Diagram](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/Switch-Board/switch-board.jpg)
+![Diagram](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/Switch-Board/switch-board.png)
 
 ## How does it work ?
 When the Controler-Board receives order from sensors (Hall sensors, Manual switches), it
