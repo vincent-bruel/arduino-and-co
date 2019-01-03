@@ -6,7 +6,7 @@ This page describes the motorized mobile hole linear plate
 
 ## Motorized it !
 
-I just motorized it with a Motor-Board (see the dedicated directory) to control a DC 12V motor and some rack and pinion.
+I only motorized it with a Motor-Board (see the dedicated directory) to control a DC 12V motor and some rack and pinion.
 How do the Motor-Board know in which position the wood plate is ?
 This is done with 4 hall sensor (the same type as the one I used on blast gates) and 1 magnet.
 
