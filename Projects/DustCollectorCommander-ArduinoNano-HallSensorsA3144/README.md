@@ -9,9 +9,10 @@ requires 230V wiring, that can be dangerous and cause serious injury/death/...
 
 ## Logical Architecture choice
 
-If your workshop is a small area, you will have only one main dust collection line, 
-so no need for a Motor-Board nor a Mobile-Hole-Linear-Plate (see description below)
-If your workshop is a big area, or if you want to optimize/maximize 
+**ONE-LINE**: If your workshop is a small area, you will have only one main dust collection line, 
+so no need for a Motor-Board nor a Mobile-Hole-Linear-Plate (see description below).
+
+**SEVERAL-LINES**:If your workshop is a big area, or if you want to optimize/maximize 
 the dust collection airflow you will have to shorten the dust collection lines 
 for the big producers of shavings: in this case you will need a manual Mobile-Hole-Linear-Plate (you slide it manually) or
 a motorized one with a Motor-Board.
