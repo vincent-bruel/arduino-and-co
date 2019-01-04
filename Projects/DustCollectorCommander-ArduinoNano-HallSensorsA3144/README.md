@@ -50,6 +50,7 @@ It shows:
 11. The red lines: they are made of 3x1.5mm flexible cable for 230V, with only 2 cables used on the Controler-Board to Switch-board path.
 12. The violet lines: they are made of RJ45 cables with three cables used for: RX, TX, GND.
 
+
 The dust collector has two crosses on it since only the blower part is used: the vortex, the bags, and the mobile cart on wheels are not used.
 The motor board for the "Mobile hole board" movement based on a Arduino Nano also and a powerfull DC motor driver (Wiper motor certainly):
 1. "Mobile hole board" movement will be bound/connected to the blast gate detector (via Serial Comm) 
