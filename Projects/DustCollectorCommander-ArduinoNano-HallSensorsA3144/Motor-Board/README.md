@@ -14,6 +14,12 @@ Because we always stop the motor in front of a hole position, so the magnet is a
 6. Stop motor when a different hall sensor is activated
 7. Goto 2.
 
+This pseudo code is implemented in the Arduino code (.ino).
+Note that this is not yet a production code, just a proof-of-concept for now, because the hardare
+is in development.
+So the .ino is subject to change.
+So the Wiring Schema is subject to change
+
 ## Components used
 1. DC 12V wiper motor
 2. VNH2SP30 1 motor controler, high current
@@ -27,3 +33,4 @@ Action | Pin states
 STOP   | D7 0, D8 0 & D7 1, D7 1
 CCW    | D7 0, D8 1 
 CW     | D7 1, D8 0
+

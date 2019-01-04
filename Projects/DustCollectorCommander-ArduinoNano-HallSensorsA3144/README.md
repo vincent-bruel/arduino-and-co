@@ -7,10 +7,32 @@ The magnetic detection is made with hall sensors (cheap A3144).
 WARNING: do not attempt to wire/solder anything unless you have the required skills to do it: this project
 requires 230V wiring, that can be dangerous and cause serious injury/death/...
 
-## Logical Architecture
+## Logical Architecture choice
+
+If your workshop is a small area, you will have only one main dust collection line, 
+so no need for a Motor-Board nor a Mobile-Hole-Linear-Plate (see description below)
+If your workshop is a big area, or if you want to optimize/maximize 
+the dust collection airflow you will have to shorten the dust collection lines 
+for the big producers of shavings: in this case you will need a manual Mobile-Hole-Linear-Plate (you slide it manually) or
+a motorized one with a Motor-Board.
+
+## Logical Architecture "ONE-LINE": only one dust collection line
+![Logical Architecture](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander-architecture-one-line.jpg)
 
 
-![Logical Architecture](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander-architecture.jpg)
+The above schema shows the logical architecture.
+It shows:
+
+1. The Controler-Board: Arduino Nano and relay. Input: magnetic sensors on each blast gate. Output: live to the Switch-Board.
+2. The Switch-Board: 230V box with a 20A contactor triggered by the relay which is inside the Controler-Board.
+3. The Blast gates with magnetic sensor: DIY wood blast gate, with a A3144 sensor, a 10Kohm resistor and a magnet
+4. The flexible pipes: thin metallic flexible pipes 125mm diameter
+5. The non flexible pipes: standard 100mm PVC pipes (grey ones).
+6. The green lines: they are made of RJ45 cables with three cables used for 5V, GND, and return SIGNAL.
+7. The red lines: they are made of 3x1.5mm flexible cable for 230V, with only 2 cables used on the Controler-Board to Switch-board path.
+
+## Logical Architecture "SEVERAL-LINES": several dust collection lines
+![Logical Architecture](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/DustCollectorCommander-architecture-four-lines.jpg)
 
 The above schema shows the logical architecture.
 It shows:
@@ -28,12 +50,30 @@ It shows:
 12. The violet lines: they are made of RJ45 cables with three cables used for: RX, TX, GND.
 
 The dust collector has two crosses on it since only the blower part is used: the vortex, the bags, and the mobile cart on wheels are not used.
-The motor board for the "Mobile hole board" movement is not yet developped, but it will be based on a Arduino Nano also and a powerfull DC motor driver (Wiper motor certainly):
-1. "Mobile hole board" movement will be bound to the blast gate detector (via Serial Comm) to select the main dust collection line when activated: currently I have to manually move the "mobile hole board" in front of the main line hole.
-2. Nowadays a simple switch is used to turn the dust collector after manually having moved the "mobile hole board" for the non-main-line dust producers
-3. This simple switch will be replaced by an analog potentiometer (or a rotary encoder) to select which line to align with the "mobile hole board".
+The motor board for the "Mobile hole board" movement based on a Arduino Nano also and a powerfull DC motor driver (Wiper motor certainly):
+1. "Mobile hole board" movement will be bound/connected to the blast gate detector (via Serial Comm) 
+to select the main dust collection line when activated: currently I have to manually move the "mobile hole board" in front of the main line hole.
+2. Nowadays a simple switch is used to turn the dust collector on after manually having moved the "mobile hole board" for the non-main-line dust producers
+3. This simple switch will be replaced by a 4 way selector (rotary encoder) to select which line to align with the "mobile hole board".
+4. When operator activates a blast-gate (on), the Controler-Board sends a message to the Motor-Board via Serial-Com to tell it to move to
+the Main-Line position.
 
-## Some use cases
+
+## Some use cases for the "ONE-LINE"
+
+1. Use the Miter saw (or any other device of the main-line)
+	1. Operator will push the blast gate of the Miter saw (open position)
+	2. Controler-Board will Turn the dust collector ON
+	3. Operator will use the miter saw
+	4. Operator will push the blast gate of the Miter saw (closed position)
+	5. Controler-Board will Turn the dust collector OFF.
+
+3. Typical woodworking meta use case 
+	1. Use Miter saw (or any other device) multiple times 
+	2. Use the workbench blast gate to connect and use the orbital sander  (Operator manipulates the Workbench blast gate)
+	3. Use the workbench blast gate to connect and use the flexible pipe to clean the workbench (Operator manipulates the Workbench blast gate)
+	
+## Some use cases for the "SEVERAL-LINES"
 1. Use the Bandsaw: 
 	1. Operator will turn the 4 way selector to the Bandsaw position
 	2. The Controler-Board will Turn the dust collector off (if it was on), 
