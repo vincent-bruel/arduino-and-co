@@ -115,7 +115,7 @@ void writeString(char *str) {
 #define CURRENT_SEN_1 A5
 
 // Enable pin
-#define EN_PIN_1 A0
+#define EN_PIN_1 A6
 
 
 
