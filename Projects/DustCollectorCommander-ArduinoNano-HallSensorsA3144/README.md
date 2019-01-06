@@ -7,6 +7,9 @@ The magnetic detection is made with hall sensors (cheap A3144).
 WARNING: do not attempt to wire/solder anything unless you have the required skills to do it: this project
 requires 230V wiring, that can be dangerous and cause serious injury/death/...
 
+Note: 06 janv 2019: The Controler-Board and Switch-Board schema are used and work very well since several weeks.
+The Motor-Board is still in development (almost the mechanical rack and pinion have to be finalized, and the algorithm has not been tested)
+
 ## Logical Architecture choice
 
 **ONE-LINE**: If your workshop is a small area, you will have only one main dust collection line, 
