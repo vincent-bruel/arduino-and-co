@@ -8,6 +8,7 @@ requires 230V wiring, that can be dangerous and cause serious injury/death/...
 ![Diagram](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/Switch-Board/switch-board.png)
 
 ## Example of switch board
+Here the 2A switch has been forgotten, if you compare to the Electrical diagram.
 
 ![Diagram](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/Switch-Board/20181201_124000.jpg)
 

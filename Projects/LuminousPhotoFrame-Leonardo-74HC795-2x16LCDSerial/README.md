@@ -29,4 +29,5 @@ See file LuminousFrameFritzing.jpg
 ## What do you have to tune ?
 1. Place leds behind you photo (2cm behind to obtain a sweet spot of approx 1cm on the photo)
 2. Change names in the .ino according to the place names or buildings/things you have put a led behind.
+3. Put a led strip (NOT controlled by Arduino), around the frame on the back of the photo.
 
