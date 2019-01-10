@@ -1,5 +1,25 @@
 ## Subject: Get youtube data and display it with 4x 8x8 dot matrix led with an ESP32
 
+The code displays in a loop the following values:
+	1. Subscribers <nbSubs> (total number of subscribers to your channel)
+	2. Views <nbViews> (total views for all videos)
+	3. Cmt <nbCmt> (total comments for all videos)
+	4. Vid <nbVideos> (total number of videos in your channel)
+	5. Delta Subscribers +<nbSubs> (total number of subscribers to your channel, since the last boot time)
+	6. Delta Views +<nbViews> (total views for all videos, since the last boot time)
+	7. Delta Cmt +<nbCmt> (total comments for all videos, since the last boot time)
+	8. Delta Vid +<nbVideos> (total number of videos in your channel, since the last boot time)
+	9. Hour.Minutes
+	
+## Screen samples
+![Delta subscribers](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/YoutubeStatistics-ESP32-4xDotMatrix8x8Leds/_D7K0136.jpg)
+
+![Delta comments](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/YoutubeStatistics-ESP32-4xDotMatrix8x8Leds/_D7K0137.jpg)
+
+![Hour.Minutes](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/YoutubeStatistics-ESP32-4xDotMatrix8x8Leds/_D7K0139.jpg)
+
+![Views](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/YoutubeStatistics-ESP32-4xDotMatrix8x8Leds/_D7K0141.jpg)
+
 ## Schema
 ![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/CommonHardware/ESP32-4xDotMatrix8x8Leds/ESP32-4x8x8%20dot%20matrix%20led%20max7219_bb.jpg)
 

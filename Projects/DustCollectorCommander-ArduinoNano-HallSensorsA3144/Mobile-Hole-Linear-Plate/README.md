@@ -4,6 +4,11 @@ This page describes the motorized mobile hole linear plate
 
 ![AskWoodMan](https://www.youtube.com/watch?v=DTT-PUUXmUc&t=4s)
 
+## Example of what could be achieved
+Here it is the mobile hole linear plate, before it's motor has been added
+
+![The mobile hole linear plate](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/DustCollectorCommander-ArduinoNano-HallSensorsA3144/Mobile-Hole-Linear-Plate/20181201_123953.jpg)
+
 ## Motorized it !
 
 I only motorized it with a Motor-Board (see the dedicated directory) to control a DC 12V motor and some rack and pinion.

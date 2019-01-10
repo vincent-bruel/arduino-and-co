@@ -3,6 +3,11 @@ and place behind some leds and a lcd 16x2 chars
 to point/highlight some locations into the photo.
 		
 
+## Example with a polycarbonate front panel
+![Photo1](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/LuminousPhotoFrame-Leonardo-74HC795-2x16LCDSerial/_D7K0132.jpg)
+
+![Photo2](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/LuminousPhotoFrame-Leonardo-74HC795-2x16LCDSerial/_D7K0133.jpg)
+   
 ## Schema
 ![Schema](https://github.com/vincent-bruel/arduino-and-co/blob/master/Projects/LuminousPhotoFrame-Leonardo-74HC795-2x16LCDSerial/LuminousFrameFritzing_bb.jpg)
   
