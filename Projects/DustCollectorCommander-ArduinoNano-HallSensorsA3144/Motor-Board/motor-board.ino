@@ -14,7 +14,7 @@
 
 */
 
-#define UNIT_TEST_NO_MOTOR 1
+//#define UNIT_TEST_NO_MOTOR 1
 #define UNIT_TEST_NO_HALL_SENSOR 1
 //======================= HALL SENSORS ========
 // Hole definitions
@@ -102,7 +102,7 @@ void writeString(char *str) {
 #define CW    1       // Counter wise
 #define CCW   2       // Counter clock wise
 // Set it to  MIN(powerSupplyMaxAmps, motorMaxAmps)
-#define CS_THRESHOLD 15 // Maximum current allowed
+#define CS_THRESHOLD 25 // Maximum current allowed
 
 //MOTOR 1              //  CW  | CCW
 #define MOTOR_A1_PIN 7 // HIGH | LOW   
@@ -211,8 +211,12 @@ void loop() {
 #ifdef UNIT_TEST_NO_MOTOR
   bool tooMuchCurrent = false;
 #else
-  bool tooMuchCurrent = analogRead(CURRENT_SEN_1) > CS_THRESHOLD;
-
+  int current = analogRead(CURRENT_SEN_1);
+  bool tooMuchCurrent =  current > CS_THRESHOLD;
+  if (tooMuchCurrent) {
+    Serial.print("Too much current:");
+    Serial.println(current);
+  }
   if (currentHoleIndex == desiredHoleNumber || tooMuchCurrent) {
     if (direct != BRAKE) {
       Serial.println("Stopping motor");
@@ -228,7 +232,11 @@ void loop() {
     }
     // Full speed when far from hole, reduced speed when near the destination hole
     speed = ABS(currentHoleIndex - desiredHoleNumber) > 1 ? 255 : 255 / 2;
-    Serial.print("Moving motor dir=");
+    Serial.print("Hole current:");
+    Serial.print(currentHoleIndex);
+    Serial.print(" desired:");
+    Serial.print(desiredHoleNumber);
+    Serial.print(" Moving motor dir=");
     Serial.print(direct);
     Serial.print(" speed=");
     Serial.println(speed);
