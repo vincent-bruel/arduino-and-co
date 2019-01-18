@@ -49,7 +49,7 @@ NTPClient timeClient(ntpUDP);
 // Objets permettant de récupérer les stats Youtube
 YoutubeApi *api = NULL;
 
-unsigned long api_mtbs = 300000; //mean time between api requests
+unsigned long api_mtbs = 300000; //mean time between api requests 5min = 300000ms
 unsigned long api_lasttime = 0L;   //last time api request has been done
 bool first = true;
 bool atLeastOneStat = false;
@@ -92,11 +92,15 @@ void getYoutubeDataAndDisplay()
   if (millis() < api_lasttime) {
     api_lasttime = millis();
   }
-  if (first || millis() - api_lasttime > api_mtbs)  {
+  if (first || (millis() - api_lasttime) > api_mtbs)  {
     Serial.println("---------Get Stats---------");
+    scrollText("Get Stats");
     statsOK = api->getChannelStatistics(CHANNEL_ID);
     if (statsOK) {
+      delay(500);
+      scrollText("Stats OK");
       atLeastOneStat = true;
+      api_lasttime = millis();
       if (first) {
         isub = api->channelStats.subscriberCount;
         iview = api->channelStats.viewCount;
@@ -104,11 +108,20 @@ void getYoutubeDataAndDisplay()
         ivid = api->channelStats.videoCount;
       }
     } else {
+      delay(500);
+      scrollText("Stats NOK");
       Serial.println("---------Get Stats FAILED ---------");
       scrollText("Youtube Stats Fail");
       delay(500);
     }
     first = false;
+  } else {
+    if (first) {
+      scrollText("First");
+    }
+    char buf[255];
+    sprintf(buf, "Delta %ld ms", millis() - api_lasttime);
+    scrollText(buf);
   }
 
   if (atLeastOneStat) {
@@ -127,7 +140,6 @@ void getYoutubeDataAndDisplay()
         displayYoutubeStat("Vid +", api->channelStats.videoCount - ivid);
       }
   }
-  api_lasttime = millis();
   mx.clear();
 }
 
