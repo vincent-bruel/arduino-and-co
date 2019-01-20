@@ -12,26 +12,19 @@ The Motor-Board is still in development (almost the mechanical rack and pinion h
 
 All video below are in FRENCH language but have ENGLISH native subtitles (as opposed to automatic garbage/random subtitles)
 
-1 - Presentation
-![Presentation](https://youtu.be/Z6V0JRFPG_k}
+1 - ![Presentation](https://youtu.be/Z6V0JRFPG_k)
 
-2 - Schemas and source code on GITHUB
-![Schemas and source code on GITHUB](https://youtu.be/-QdaTGBWYwc)
+2 - ![Schemas and source code on GITHUB](https://youtu.be/-QdaTGBWYwc)
 
-3 - The JET DC1100 blower
-![The JET DC1100 blower](https://youtu.be/g1BsIPjSJYs)
+3 - ![The JET DC1100 blower](https://youtu.be/g1BsIPjSJYs)
 
-4 - The mobile linear plate
-![The mobile linear plate](https://youtu.be/00rngfceFSk)
+4 - ![The mobile linear plate](https://youtu.be/00rngfceFSk)
 
-5 - Electronic components
-![Electronic components](https://youtu.be/vBWDjufKLEc)
+5 - ![Electronic components](https://youtu.be/vBWDjufKLEc)
 
-6 - Outdoor SILO
-![Outdoor SILO](https://youtu.be/YXTrqXZPfOM)
+6 - ![Outdoor SILO](https://youtu.be/YXTrqXZPfOM)
 
-7 - Program the Arduino
-![Program the Arduino](https://youtu.be/8uKOoJBHGeQ)
+7 - ![Program the Arduino](https://youtu.be/8uKOoJBHGeQ)
 
 
 ## Logical Architecture choice
