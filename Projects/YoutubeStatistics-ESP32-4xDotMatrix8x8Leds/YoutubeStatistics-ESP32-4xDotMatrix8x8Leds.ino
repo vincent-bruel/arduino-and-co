@@ -119,9 +119,10 @@ void getYoutubeDataAndDisplay()
     if (first) {
       scrollText("First");
     }
-    char buf[255];
-    sprintf(buf, "Delta %ld ms", millis() - api_lasttime);
-    scrollText(buf);
+	// To debug
+    //char buf[255];
+    //sprintf(buf, "Delta %ld ms", millis() - api_lasttime);
+    //scrollText(buf);
   }
 
   if (atLeastOneStat) {
