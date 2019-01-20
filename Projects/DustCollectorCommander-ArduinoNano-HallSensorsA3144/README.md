@@ -10,6 +10,30 @@ requires 230V wiring, that can be dangerous and cause serious injury/death/...
 Note: 06 janv 2019: The Controler-Board and Switch-Board schema are used and work very well since several weeks.
 The Motor-Board is still in development (almost the mechanical rack and pinion have to be finalized, and the algorithm has not been tested)
 
+All video below are in FRENCH language but have ENGLISH native subtitles (as opposed to automatic garbage/random subtitles)
+
+1 - Presentation
+![Presentation](https://youtu.be/Z6V0JRFPG_k}
+
+2 - Schemas and source code on GITHUB
+![Schemas and source code on GITHUB](https://youtu.be/-QdaTGBWYwc)
+
+3 - The JET DC1100 blower
+![The JET DC1100 blower](https://youtu.be/g1BsIPjSJYs)
+
+4 - The mobile linear plate
+![The mobile linear plate](https://youtu.be/00rngfceFSk)
+
+5 - Electronic components
+![Electronic components](https://youtu.be/vBWDjufKLEc)
+
+6 - Outdoor SILO
+![Outdoor SILO](https://youtu.be/YXTrqXZPfOM)
+
+7 - Program the Arduino
+![Program the Arduino](https://youtu.be/8uKOoJBHGeQ)
+
+
 ## Logical Architecture choice
 
 **ONE-LINE**: If your workshop is a small area, you will have only one main dust collection line, 
